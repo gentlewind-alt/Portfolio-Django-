@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Sixtyfour+Convergence&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=rocket_launch');
+
 .body{
     display: flex;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .sections{
@@ -9,54 +19,65 @@
     gap: 50px;
     height: 100vh; 
     width: 100vw;
-    padding: 100px 100px 30px 100px;
+    padding: 30px 100px 30px 100px;
     margin: auto;
     overflow: auto;
 }
 
 .container{
-    display: flex;
-    background-color: #2C5D4C;
+    display: grid;
+    background-color: #46a98f;
     overflow: auto;
     max-width: fit-content;
+    flex-direction: column;
     max-height: fit-content;
     padding: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 100px 30px 100px;
 }
 
 .home{
-    display: flexbox; 
-    background-color:#329B76;  
+    display: flex;
     border-radius:50px;
     max-height: fit-content;
     max-width: fit-content;
     flex-flow: column nowrap;
     padding: 20px;
     align-items: stretch;
+    background-color: #329B76;
 }
 
 .home-title{
     display: flex;
     font-family: "Irish Grover", system-ui;
     color: white;
-    font-size: 60px;
+    flow-direction: column;
+    font-size: 70px;
     font-weight: 400;
     padding: 20px 40px 20px 20px;
     text-align: right;
     align-items: center;
-    
-    
+    overflow-wrap: break-word;   
+    background: -webkit-linear-gradient(#4cfa94,#b3ff67, #57fff7, #4cfa94, #d6ff4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .home p{
     font-family: "Irish Grover", system-ui;
-    color: white;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 400;
     text-align: center;
+    margin: 20px;
     line-height: 1.5;
-    overflow: auto;
+    overflow: hidden;
     max-width: fit-content;
     max-height: fit-content;
+    background: -webkit-linear-gradient(#d0fe3b,#a4eb5d, #55f8f0, #4cfa94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .home img{
@@ -66,16 +87,127 @@
     float: left;
     object-fit: contain;
     margin: 14px 14px 14px 14px;
-    
+}
+
+.home ul{
+    list-style: disc inside;
+    font-family: "Irish Grover", system-ui;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+    margin: 35px;
+    background: -webkit-linear-gradient(#f8ab05, #d0fe3b, #a4eb5d, #55f8f0, #4cfa94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
 .projects{
-    padding:20px; 
-    background-color:#a45cfc; 
-    text-align:left; 
-    border-radius:15px
+    display: flex; 
+    background-color:#a45cfc;  
+    border-radius:50px;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-flow: column nowrap;
+    padding: 20px;
+    align-items: stretch;
 }
+
+.projects h1{
+    display: flex;
+    font-family: "Irish Grover", system-ui;
+    color: white;
+    font-size: 70px;
+    font-weight: 400;
+    text-align: right;
+    overflow-wrap: break-word;   
+    padding: 20px 40px 20px 20px;
+    background: -webkit-linear-gradient(#4cfa94,#b3ff67, #57fff7, #4cfa94, #d6ff4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+
+.project-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flwex-start;
+    gap: 50px;
+    border-radius: 25px;
+    font-family: "Irish Grover", system-ui;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.project-item a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #4cfa94;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/* 1) Container */
+.project-stack {
+    position: relative;
+    width: 90%;
+    max-width: fit-content;
+    margin: 2rem auto;
+    max-height: fit-content;         /* adjust to panel height */
+  }
+  
+  /* 2) Base panel styles */
+  .project-panel {
+    font-family: "Irish Grover", system-ui;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #2c3e50;
+    max-width: fit-content;
+    max-height: fit-content; 
+    top: 0; left: 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #f9f9ff;
+    border: 1px solid #d0dce5;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    z-index: 100; /* base z-index */
+  }
+  
+  /* 3) Staggered stack positions */
+  #project-1 { z-index: 4; transform: translateY(0px); }
+  #project-2 { z-index: 3; transform: translateY(0px); }
+  #project-3 { z-index: 2; transform: translateY(0px); }
+  
+  /* 4) Hide content by default when not active */
+  .project-content {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+  
+  /* 5) On target: bring to front & expand */
+  .project-panel:target {
+    z-index: 10 !important;
+    transform: translateY() scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* 6) Reveal content only on target */
+  .project-panel:target .project-content {
+    opacity: 1;
+    max-height: 1000px; /* large enough to show all content */
+  }
+  
+  /* 7) Optional: style headings */
+  .project-panel h4 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    color: #2c3e50;
+  }
+  
 
 .skills{
     padding:20px; 
@@ -91,26 +223,22 @@
     border-radius:15px
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .header{
-    overflow: hidden;
+    overflow: auto;
+    font-family: "Irish Grover", system-ui;
     display: flex;
+    position: fixed;
+    font-weight: 400;
+    font-style: normal;
     width: 100%;
-    background-color: #334456;
+    background-color: #357760;
+    border-radius: 12px;
     color: white;
-    padding: 10px 20px;
-    display: flex;
+    padding: 10px 30px;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0;
-    padding: 20px;
     z-index: 999;
 }
 
@@ -118,6 +246,8 @@
     background-color: #333;
     overflow: hidden;
     border-radius: 15px;
+    box-shadow: #333 0px 0px 5px;
+    font-family: "Irish Grover", system-ui;
   }
   
   /* Style the links inside the navigation bar */
@@ -129,6 +259,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    
   }
   
   /* Change the color of links on hover */
@@ -142,6 +273,3 @@
     background-color: #04AA6D;
     color: white;
   }
-  
-
-  

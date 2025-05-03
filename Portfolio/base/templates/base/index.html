@@ -6,49 +6,110 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-    </head>
+   </head>
     <body>
         <div class="container">
-            <!--<header class="header"> 
+            <div class="header"> 
                 <div style="font-size: 1.5rem; font-weight: bold;">
                     My Portfolio
                 </div>
                 <div class="topnav">
-                    <a class="active" href="#home">Home</a>
-                    <a href="#news">News</a>
+                    <a href="#home">Home</a>
+                    <a href="#project">Projects</a>
                     <a href="#contact">Contact</a>
                     <a href="#about">About</a>
                 </div>
-                
-            </header>-->
+            </div>
 
-            <div class="sections">
-                <section class="home">
+             <!--<div class="sections"> -->
+                <section id="home"class="home">
                     <h1 class="home-title">
                         <img src="{% static 'images/portfolio.jpg' %}" alt="Portfolio Image" class="portfolio-image">
-                        HELLOOO!
-                        <br>
+                        HELLOOO.....!
                         Welcome to my portfolio
                     </h1>
-                    
-                    <p>
-                        Hi, I’m Samarth Singh Rawat,
-                        a tech enthusiast, problem solver, and B.Tech student specializing in Information Technology at KIIT University.
-                        This portfolio is a glimpse into my journey — where I’ve come from, what I’ve built, and what I aim to do.
-                    </p>                     
-                </section> 
+                        <p>
+                            Hi, I’m Samarth Singh Rawat,
+                            a tech enthusiast, problem solver, and B.Tech student specializing in Information Technology at KIIT University.
+                            This portfolio is a glimpse into my journey — where I’ve come from, what I’ve built, and what I aim to do.
+                        </p>
+                    <hr style="background-color: aquamarine;">
+                        <ul>    <span class="material-symbols-outlined">
+                            rocket_launch
+                                </span> What You’ll Find Here:
+                            <li> A detailed About Me section — my background, academics, and interests</li>
+                            <li>Showcased Projects I've worked on (web apps, AI tools, and more)</li>                        
+                            <li>A list of my Technical Skills in programming, tools, and frameworksv                    
+                            <li> A Resume you can view or download</li>                    
+                            <li> A Contact form to connect with me directly</li>
+                        </ul>
+                </section>
 
-                <section class="projects" >
-                    <h2>Projects</h2>
-                    <p>Here are some of the projects I have worked on:</p>
-                    <ul>
-                        <a href="#">Project 1</a>
-                        <a href="#">Project 2</a>
-                        <a href="#">Project 3</a>
-                    </ul>
+                <section id="project"class="projects" >
+                    <div class="project-stack">
+                        <h1>Projects</h1>
+                        <div class="project-item">
+                            <p>Here are some of the projects I have worked on:</p>
+                            <h3>🚀 Projects:</h3>
+                            <a href="#project-1">
+                                <div id="project-1" class="project-panel">
+                                  <h4>🎧 Music Sentiment Analysis</h4>
+                                  <div class="project-content">
+                                    🎧 Music Sentiment Analysis using Spotify API 
+                                    Overview:
+                                    A data-driven project that analyzes the emotional sentiment of music using audio features from Spotify. It leverages machine learning and deep learning techniques to detect mood trends from user listening behavior.
+
+                                    Key Features:
+
+                                    Uses Spotify Web API to extract track features like valence, tempo, and energy
+                                    Trains sentiment classification models using TensorFlow, Scikit-learn, and Hugging Face Transformers
+                                    Aims to provide mood-based insights and emotional trend graphs over time
+                                    Tech Stack:
+                                    Python, Spotify API, TensorFlow, Scikit-learn, Transformers (Hugging Face)
+                                  </div>
+                                </div>
+                            </a>
+
+                            <a href="#project-2">
+                                <div id="project-2" class="project-panel">
+                                  <h4>🌦️ Weather Dashboard</h4>
+                                  <div class="project-content">
+                                    Overview:
+                                    A web application that provides real-time weather updates and forecasts for any location worldwide. It utilizes the OpenWeatherMap API to fetch weather data and presents it in a user-friendly interface.
+
+                                    Key Features:
+
+                                    displays current weather conditions, hourly forecasts, and 5-day predictions
+                                    Allows users to search for weather by city name or geographical coordinates
+                                    Implements a responsive design for mobile and desktop views
+
+                                    Tech Stack:
+                                    HTML, CSS, JavaScript, OpenWeatherMap API, Bootstrap
+                                  </div>
+                                </div>
+                            </a>
+
+                            <a href="#project-3">
+                                <div id="project-3" class="project-panel">
+                                  <h4>🎬 Movie Recommendation</h4>
+                                  <div class="project-content">
+                                    🎬 Movie Recommendation System 
+                                    Overview:
+                                    A collaborative filtering-based recommendation engine that personalizes movie suggestions based on user interaction data and preferences.
+
+                                    Key Features:
+
+                                    Uses Pandas, NumPy, and Scikit-learn for data processing and model training
+                                    Implements a user-friendly interface to rate movies and receive tailored recommendations
+                                    Analyzes historical viewing patterns to predict similar content
+
+                                    Tech Stack:
+                                    Python, Pandas, NumPy, Scikit-learn, HTML/CSS, Flask
+                                  </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </section>
 
                 <!--<section class="skills">
@@ -77,7 +138,7 @@
                         
                     </ul>
                 </section> -->
-            </div>
+             <!--</div> -->
         </div>
     </body>
 </html>
