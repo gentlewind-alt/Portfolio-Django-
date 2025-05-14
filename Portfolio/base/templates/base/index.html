@@ -8,14 +8,15 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
    </head>
     <body>
-        <div class="container">
-            <div class="header"> 
+        <div class="container" id="container">
+            <div class="header" id="header"> 
                 <div style="font-size: 1.5rem; font-weight: bold;">
                     My Portfolio
                 </div>
-                <div class="topnav">
-                    <a href="#home">Home</a>
+                <div class="topnav" id="myTopnav">
+                    <a href="#container">Home</a>
                     <a href="#project">Projects</a>
+                    <a href="#skill">Skills</a>
                     <a href="#contact">Contact</a>
                     <a href="#about">About</a>
                 </div>
@@ -24,7 +25,7 @@
              <!--<div class="sections"> -->
                 <section id="home"class="home">
                     <h1 class="home-title">
-                        <img src="{% static 'images/portfolio.jpg' %}" alt="Portfolio Image" class="portfolio-image">
+                        <img src="{% static 'images/profile.png' %}" alt="Portfolio Image" class="portfolio-image">
                         HELLOOO.....!
                         Welcome to my portfolio
                     </h1>
@@ -33,39 +34,24 @@
                             a tech enthusiast, problem solver, and B.Tech student specializing in Information Technology at KIIT University.
                             This portfolio is a glimpse into my journey — where I’ve come from, what I’ve built, and what I aim to do.
                         </p>
-                    <hr style="background-color: aquamarine;">
-                        <ul>    <span class="material-symbols-outlined">
-                            rocket_launch
-                                </span> What You’ll Find Here:
-                            <li> A detailed About Me section — my background, academics, and interests</li>
-                            <li>Showcased Projects I've worked on (web apps, AI tools, and more)</li>                        
-                            <li>A list of my Technical Skills in programming, tools, and frameworksv                    
-                            <li> A Resume you can view or download</li>                    
-                            <li> A Contact form to connect with me directly</li>
-                        </ul>
                 </section>
 
-                <section id="project"class="projects" >
+                <section id="project" class="projects" >
+                    <h1>Projects</h1>
                     <div class="project-stack">
-                        <h1>Projects</h1>
                         <div class="project-item">
                             <p>Here are some of the projects I have worked on:</p>
-                            <h3>🚀 Projects:</h3>
+                            <h2>🚀 Projects:</h2>
+                           <div class="project-list"> 
                             <a href="#project-1">
                                 <div id="project-1" class="project-panel">
                                   <h4>🎧 Music Sentiment Analysis</h4>
+                                  <img src="{% static 'images/weather.svg' %}" alt="Music Sentiment Analysis" class="project-image">
                                   <div class="project-content">
-                                    🎧 Music Sentiment Analysis using Spotify API 
+                                    <h5>🎧 Music Sentiment Analysis using Spotify API 
                                     Overview:
                                     A data-driven project that analyzes the emotional sentiment of music using audio features from Spotify. It leverages machine learning and deep learning techniques to detect mood trends from user listening behavior.
-
-                                    Key Features:
-
-                                    Uses Spotify Web API to extract track features like valence, tempo, and energy
-                                    Trains sentiment classification models using TensorFlow, Scikit-learn, and Hugging Face Transformers
-                                    Aims to provide mood-based insights and emotional trend graphs over time
-                                    Tech Stack:
-                                    Python, Spotify API, TensorFlow, Scikit-learn, Transformers (Hugging Face)
+                                    </h5>
                                   </div>
                                 </div>
                             </a>
@@ -73,18 +59,11 @@
                             <a href="#project-2">
                                 <div id="project-2" class="project-panel">
                                   <h4>🌦️ Weather Dashboard</h4>
+                                    <img src="{% static 'images/weather.svg' %}" alt="Weather Dashboard" class="project-image">
                                   <div class="project-content">
-                                    Overview:
+                                   <h5>Overview:
                                     A web application that provides real-time weather updates and forecasts for any location worldwide. It utilizes the OpenWeatherMap API to fetch weather data and presents it in a user-friendly interface.
-
-                                    Key Features:
-
-                                    displays current weather conditions, hourly forecasts, and 5-day predictions
-                                    Allows users to search for weather by city name or geographical coordinates
-                                    Implements a responsive design for mobile and desktop views
-
-                                    Tech Stack:
-                                    HTML, CSS, JavaScript, OpenWeatherMap API, Bootstrap
+                                   </h5>
                                   </div>
                                 </div>
                             </a>
@@ -92,35 +71,112 @@
                             <a href="#project-3">
                                 <div id="project-3" class="project-panel">
                                   <h4>🎬 Movie Recommendation</h4>
+                                    <img src="{% static 'images/weather.svg' %}" alt="Movie Recommendation" class="project-image">
                                   <div class="project-content">
+                                    <h5>
                                     🎬 Movie Recommendation System 
                                     Overview:
                                     A collaborative filtering-based recommendation engine that personalizes movie suggestions based on user interaction data and preferences.
-
-                                    Key Features:
-
-                                    Uses Pandas, NumPy, and Scikit-learn for data processing and model training
-                                    Implements a user-friendly interface to rate movies and receive tailored recommendations
-                                    Analyzes historical viewing patterns to predict similar content
-
-                                    Tech Stack:
-                                    Python, Pandas, NumPy, Scikit-learn, HTML/CSS, Flask
+                                    </h5>
                                   </div>
                                 </div>
+                                </div>                                
                             </a>
                         </div>
                     </div>
                 </section>
 
-                <!--<section class="skills">
-                    <h2>Skills</h2>
-                    <p>Here are some of the skills I have acquired:</p>
-                    <ul>
-                        HTML
-                        CSS
-                        JavaScript
-                        Python
-                    </ul>
+                <section id="skill" class="skills">
+                    <h1>Skills</h1>
+                    <h2>TOOLS & TECHNOLOGY</h2>
+                    <div class="skills-case">
+                    <div class="skills-showcase">
+                        <div class="skill-item">
+                            <img src="{% static 'images/html5.svg' %}" alt="HTML5" class="skill-icon">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="{% static 'images/css3.svg' %}" alt="CSS3" class="skill-icon">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="{% static 'images/javascript.svg' %}" alt="JavaScript" class="skill-icon">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="{% static 'images/python.svg' %}" alt="Python" class="skill-icon">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="{% static 'images/django.svg' %}" alt="Django" class="skill-icon">
+                            <span>Django</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="{% static 'images/git.svg' %}" alt="Git" class="skill-icon">
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="{% static 'images/c.svg' %}" alt="C" class="skill-icon">
+                            <span>C</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="{% static 'images/java.svg' %}" alt="Java" class="skill-icon">
+                            <span>JAVA</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="{% static 'images/mysql.svg' %}" alt="MySQL" class="skill-icon">
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="skills-proficiency">
+                        <div class="skills-bars">
+                            <p>HTML5</p>
+                            <div class="skill-container">
+                                <div class="skills html" style="width:90%">90%</div>
+                            </div>
+
+                            <p>CSS3</p>
+                            <div class="skill-container">
+                                <div class="skills css" style="width:85%">85%</div>
+                            </div>
+
+                            <p>JavaScript</p>
+                            <div class="skill-container">
+                                <div class="skills js" style="width:70%">70%</div>
+                            </div>
+
+                            <p>Python</p>
+                            <div class="skill-container">
+                                <div class="skills python" style="width:80%">80%</div>
+                            </div>
+
+                            <p>Django</p>
+                            <div class="skill-container">
+                                <div class="skills django" style="width:75%">75%</div>
+                            </div>
+
+                            <p>Git</p>
+                            <div class="skill-container">
+                                <div class="skills git" style="width:80%">80%</div>
+                            </div>
+
+                            <p>C</p>
+                            <div class="skill-container">
+                                <div class="skills c" style="width:65%">65%</div>
+                            </div>
+
+                            <p>Java</p>
+                            <div class="skill-container">
+                                <div class="skills java" style="width:60%">60%</div>
+                            </div>
+
+                            <p>MySQL</p>
+                            <div class="skill-container">
+                                <div class="skills mysql" style="width:70%">70%</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </section>
 
                 <section class="contact">
@@ -137,7 +193,7 @@
                             <a href=""></a>
                         
                     </ul>
-                </section> -->
+                </section>
              <!--</div> -->
         </div>
     </body>
